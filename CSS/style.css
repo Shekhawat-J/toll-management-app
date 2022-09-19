@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue:#1B98F5;
+    --gray:#D3D3D3;
+    --off-white:#D3D3D3;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-left{
+    display: flex;
+    align-items: center;
+}
+
+.nav-left h4{
+    font-size: 25px;
+    margin-left: 0.50rem;
+    margin-right: 0.50rem;
+}
+.filter{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: var(--gray);
+}
+.toll-Name{
+   display: none;
+}
+.toll-Name-Show{
+    display: flex;
+}
+
+.search-input{
+    margin-left: 0.50rem;
+    margin-right: 0.50rem;
+    border: #758283 1px solid;
+    border-radius: 15px;
+    padding: 0.25rem 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    background-color: var(--blue);
+    color: #fff;
+    margin-left: 0.50rem;
+    margin-right: 0.50rem;
+    padding: 0.25rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+/* vehicle list */
+.heading{
+    background-color: var(--off-white);
+    margin-top: 2rem;
+}
+.vehicle-list{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #CAD5E2;
+}
+
+.entry{
+    margin-top: 0.50rem;
+    margin-bottom: 0.50rem
+}
+
+.empty{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Add A new vehicle Entry popup */
+.overlays{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(211, 211, 211, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.overlays-show{
+    display: flex;
+}
+
+
+.overlays-container{
+    background-color: #fff;
+    /* height: 50vh; */
+    width: 50vh;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.close-btn{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.overlays-container h1{
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+.vehicle-entry-form{
+    display: flex;
+    flex-direction: column;
+}
+.vehicle-entry-form label{
+    font-size: 12px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+#selectTollName{
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+}
+
+#vehicleType{
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+}
+.vehicle-number{
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+}
+.tariff-amount{
+    margin-bottom: 1rem;
+    padding: 0.25rem;
+}
+.submit-button{
+    background-color: var(--blue);
+    border: none;
+    margin-top: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+/* Add Toll Gate Entry  */
+
+.overlays-toll-gate{
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(211, 211, 211, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.overlays-toll-gate-show{
+    display: flex;
+}
+
+.overlays-container-toll-gate{
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.close-btn-toll-gate{
+    display: flex;
+    align-content: center;
+    justify-content: flex-end;
+    font-size: 25px;
+    cursor: pointer;
+}
+.overlays-container-toll-gate h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    margin-bottom: 1rem;
+}
+.toll-entry-form{
+    display: flex;
+    flex-direction: column;
+}
+.toll-entry-form label{
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+#tollGateName{
+    padding: 0.25rem;
+}
+.fare-details{
+    /* margin-top: 1rem; */
+    margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: 0.80fr 1fr 1fr;
+}
+.vehicle-type{
+    padding: 0.25rem;
+    
+}
+.single-journey-amount{
+    padding: 0.25rem;
+    margin-left: 0.25rem;
+}
+.return-journey-amount{
+    padding: 0.25rem;
+    margin-left: 0.25rem;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toll Management App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    
+    <!-- navigation  -->
+    <div class="nav">
+
+        <!-- left part -->
+        <div class="nav-left">
+            <h4>Toll entries/Vehicle entries</h4>
+
+            <select name="select toll name" id="select-container">
+                <option value="All">All</option>
+            </select>
+
+            <div class="search-form">
+                <input type="text" placeholder="Enter Vehicle Number" class="search-input">
+            </div>
+        </div>
+
+        <!-- right part -->
+        <div class="nav-right">
+
+            <div class="add-vehicle-entry">
+                <a href="#addVehicleEntry" class="btn" id="addVehicleEntry">Add Vehicle Entry</a>
+            </div>
+            <div class="add-new-toll">
+                <a href="#addNewToll" class="btn" id="addNewToll">Add New Toll</a>
+            </div>
+            <div class="view-all-tolls">
+                <a href="#viewAllTolls" class="btn">View All Tolls</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vehicle list -->
+    <div class="vehicle-list heading">
+        <h4>VEHICLE TYPE</h4>
+        <h4>VEHICLE NUMBER</h4>
+        <h4>DATE/TIME</h4>
+        <h4>TOLLNAME</h4>
+        <h4>TARIFF</h4>
+    </div>
+
+    <div class="vehicle-container">
+        
+    </div>
+    
+    <!--  Add A new entry-->
+    <div class="overlays">
+        <div class="overlays-container">
+            <div class="close-btn">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h1>Add New Entry</h1>
+        <form class="vehicle-entry-form">
+            <label for="Toll Name">Select Toll Name*</label> 
+            <select name="TollName" id="selectTollName">
+                <option value="">--Select Toll Name--</option>
+            </select>
+
+            <label for="vehicleType">Select Vehicle Type*</label>
+            <select name="VehicleType" id="vehicleType">
+                <option value="">--Select Vehicle Type--</option>
+            </select>
+
+            <label for="vehicleNumber">Vehicle Number*</label>
+            <input type="text" placeholder="Enter the Vehicle Number" class="vehicle-number">
+            
+
+            <label for="tariff">Tariff*</label>
+            <input type="text" placeholder="Tariff Amount" class="tariff-amount">
+
+            <!-- show to any error -->
+            <div class="small">
+                
+            </div>
+            <button type="submit" class="submit-button" id="submitVehicleEntry" >Add Entry</button>
+        </form>
+        </div>
+    </div>
+
+
+    <!-- Add a new toll gate -->
+    <div class="overlays-toll-gate">
+        <div class="overlays-container-toll-gate">
+            <div class="close-btn-toll-gate">
+                <i class="fa-solid fa-x"></i>
+            </div>
+            <h1>Add New Toll</h1>
+            <form class="toll-entry-form">
+
+                <label for="toll nane">Enter Toll Name*</label>
+                <input type="text" placeholder="Enter Toll Name" id="tollGateName" required>
+
+                <label for="fare details">Vehicle Fare Details*</label>
+
+                <div class="fare-details">
+                    <span class="vehicle-type">Car/Jeep/Van : </span>
+                    <input type="text" placeholder="Single Journey" class="single-journey-amount" id="CarJeepVan" required>
+                    <input type="text" placeholder="Return Journey" class="return-journey-amount" id="CarJeepVan" required>
+                </div>
+
+                <div class="fare-details">
+                    <span class="vehicle-type">LVC : </span>
+                    <input type="text" placeholder="Single Journey" class="single-journey-amount" id="LVC" required>
+                    <input type="text" placeholder="Return Journey" class="return-journey-amount"
+                    id="LVC" required>
+                </div>
+
+                <div class="fare-details">
+                    <span class="vehicle-type">Truck/Bus : </span>
+                    <input type="text" placeholder="Single Journey" class="single-journey-amount" id="truckBus" required>
+                    <input type="text" placeholder="Return Journey" class="return-journey-amount"
+                    id="truckBus" required>
+                </div>
+
+                <div class="fare-details">
+                    <span class="vehicle-type">Heavy Vehicle : </span>
+                    <input type="text" placeholder="Single Journey" class="single-journey-amount" id="heavyVehicle" required>
+                    <input type="text" placeholder="Return Journey" class="return-journey-amount" id="heavyVehicle" required>
+                </div>
+
+                <button type="button" class="submit-button" id="submitTollGate" onclick="window.location.reload();" >Add Details</button>
+                <!-- onclick="window.location.reload();" -->
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/addVehicleEntry.js"></script>
+    <script src="./js/addTollEntry.js"></script>
+</body>
+</html>
